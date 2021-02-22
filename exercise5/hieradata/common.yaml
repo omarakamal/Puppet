@@ -1,6 +1,0 @@
-exercise5::packages:
-  - 'vim'
-  - 'bash-completion'
-  - 'nfs-utils'
-  - 'policycoreutils-python-utils'
-  - 'wget'

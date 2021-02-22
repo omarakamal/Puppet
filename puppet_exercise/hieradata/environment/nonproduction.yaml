@@ -38,4 +38,4 @@ puppet_exercise::directory:
 puppet_exercise::sudoers:
   '/etc/sudoers.d/Andrews_NPGroup':
     ensure: file
-    content: %Andrews_NPGroup All=(ALL) NOPASSWD: /usr/bin/yum -y, /usr/bin/systemctl start plex-server
+    content: '%Andrews_NPGroup All=(ALL) NOPASSWD: /usr/bin/yum -y, /usr/bin/systemctl start plex-server'

@@ -10,4 +10,4 @@ class puppet_exercise {
     include puppet_exercise::groups
     include puppet_exercise::timezone
     include puppet_exercise::sudoers
-    }
+}

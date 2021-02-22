@@ -1,7 +1,7 @@
 # Class: puppet_exercise:lvm
 #
 #
-class puppet_exercise::lvm {
+class puppet_exercise::disk_management::lvm {
 	physical_volume { '/dev/sdb1':
       ensure => present,
     }

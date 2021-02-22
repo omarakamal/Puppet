@@ -3,21 +3,21 @@ puppet_exercise::groups:
     gid: 2020
 
 puppet_exercise::users:
-  'Andrewnp'
+  'Andrewnp':
     name: 'Andrewnp'
     uid: 1019
     groups: 'Andrews_NPgroup'
     home: /home/Andrewnp
     ensure: 'present'
     managehome: 'true'
-  'Tranp'
+  'Tranp':
     name: 'Tranp'
     uid: 1020
     groups: 'Andrews_NPgroup'
     home: /home/Tranp
     ensure: 'present'
     managehome: 'true'
-  'Miltonnp'
+  'Miltonnp':
     name: 'Miltonnp'
     uid: 1031
     groups: 'Andrews_NPgroup'

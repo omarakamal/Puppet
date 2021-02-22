@@ -17,7 +17,7 @@ puppet_exercise::users:
     uid: 1011
     home: /home/Miltonp
     managehome: 'true'
-  'Trap'
+  'Trap':
     name: 'Trap'
     groups: 'Andrews_PGroup'
     ensure: 'present'

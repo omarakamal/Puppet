@@ -29,11 +29,11 @@ puppet_exercise::directory:
   '/exercise':
     ensure: 'directory'
     owner: 'Andrewnp'
-    group: 'Andrews_NPGroup'
+    group: 'Andrews_NPgroup'
   '/exercise2':
     ensure: 'directory'
     owner: 'Andrewnp'
-    group: 'Andrews_NPGroup'
+    group: 'Andrews_NPgroup'
 
 puppet_exercise::sudoers:
   '/etc/sudoers.d/Andrews_NPGroup':

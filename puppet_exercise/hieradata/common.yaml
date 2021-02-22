@@ -1,9 +1,9 @@
 puppet_exercise::packages:
   - nfs-utils
+  - epel-release
   - wget
   - vim
   - nmap
   - htop
   - bash-completion
   - net-tools
-  - epel-release

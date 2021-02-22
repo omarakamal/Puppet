@@ -11,7 +11,7 @@ class puppet_exercise::nfs {
 		onlyif => '/usr/sbin/showmount -e $hostname|/usr/bin/grep /exercise canary',
 	}
 
-	service {'systemctl start nfs':
+	service {'nfs':
 		ensure  => running,
 		enable  => true,
 		require => Exec['/usr/bin/exportfs -a'],

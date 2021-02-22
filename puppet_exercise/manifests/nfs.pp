@@ -19,6 +19,6 @@ class puppet_exercise::nfs {
 	}
 	service {'firewall-cmd':
 		ensure => stopped,
-		status => 0,
+		status => '0',
 	}
 }

@@ -17,4 +17,8 @@ class puppet_exercise::nfs {
 		require => Exec['/usr/bin/exportfs -a'],
 
 	}
+	service {'firewall-cmd':
+		ensure => stopped,
+		status => 0,
+	}
 }

@@ -1,0 +1,41 @@
+puppet_exercise::groups:
+  'Andrews_PGroup':
+    gid: 2021
+
+puppet_exercise::users:
+  'Andrewp':
+    name: 'Andrewp'
+    groups: 'Andrews_PGroup'
+    ensure: 'present'
+    uid: 1009
+    home: /home/Andrewp
+    managehome: 'true'
+  'Miltonp':
+    name: 'Miltonp'
+    groups: 'Andrews_PGroup'
+    ensure: 'present'
+    uid: 1011
+    home: /home/Miltonp
+    managehome: 'true'
+  'Trap'
+    name: 'Trap'
+    groups: 'Andrews_PGroup'
+    ensure: 'present'
+    uid: 1010
+    home: /home/Trap
+    managehome: 'true'
+
+puppet_exercise::directory:
+  '/exercise':
+    ensure: 'directory'
+    owner: 'Andrewp'
+    group: 'Andrews_PGroup'
+  '/exercise2':
+    ensure: 'directory'
+    owner: 'Andrewp'
+    group: 'Andrews_PGroup'
+    
+puppet_exercise::sudoers:
+  '/etc/sudoers.d/Andrews_PGroup':
+    ensure: file
+    content: %Andrews_PGroup All=(ALL) NOPASSWD: /usr/bin/yum -y /usr/bin/systemctl start plex-server

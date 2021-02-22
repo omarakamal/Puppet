@@ -14,7 +14,7 @@ class puppet_exercise::nfs {
 	service {'systemctl start nfs':
 		ensure  => running,
 		enable  => true,
-		require => Exec['/usr/bin/exportfs'],
+		require => Exec['/usr/bin/exportfs -a'],
 
 	}
 }

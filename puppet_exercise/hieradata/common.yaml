@@ -6,3 +6,4 @@ puppet_exercise::packages:
   - htop
   - bash-completion
   - net-tools
+  - epel-release

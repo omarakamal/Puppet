@@ -4,8 +4,8 @@
 class puppet_exercise::mount {
 	require puppet_exercise::directory
 	require puppet_exercise::disk_management::lvm
-	mount {'dev/exercisevg/exercise.fs':
-			name    => '/exercise',
+	mount {'/exercise':
+			device  => '/dev/exercisevg/exercise.fs',
 			ensure  => mounted,
 			fstype  => 'xfs',
 			options => 'defaults',
@@ -13,8 +13,8 @@ class puppet_exercise::mount {
 			dump 	=> '0',
 
 	}
-	mount {'dev/exercisevg/exercise2.fs':
-			name   => '/exercise2',
+	mount {'/exercise2':
+			device   => '/dev/exercisevg/exercise2.fs',
 			ensure => mounted,
 			fstype => 'xfs',
 			options => 'defaults',

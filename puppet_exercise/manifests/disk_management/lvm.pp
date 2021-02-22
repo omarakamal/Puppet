@@ -22,28 +22,20 @@ class puppet_exercise::lvm {
 	->
 	filesystem {'/dev/exercisevg/exercise.fs':
 	   ensure  => present,
-	   fs_type => 'xfs'
+	   fs_type => 'xfs',
 	}
 
-	->
-	physical_volume { '/dev/sdb2':
-      ensure => present,
-    }
-
-    ->
-    volume_group {'exercisevg':
-	  ensure           => present,
-	  physical_volumes => '/dev/sdb2',
-	}
-	->
-	logical_volume {'exercise.fs':
+	
+	
+	logical_volume {'exercise2.fs':
 	  ensure       => present,
 	  volume_group => 'exercisevg',
-      size         => '2G',
+      size         => '1.99G',
+      require      => Volume_group['exercisevg'],
 	}
 	->
-	filesystem {'/dev/exercisevg/exercise.fs':
+	filesystem {'/dev/exercisevg/exercise2.fs':
 	   ensure  => present,
-	   fs_type => 'xfs'
+	   fs_type => 'xfs',
 	} 
 }

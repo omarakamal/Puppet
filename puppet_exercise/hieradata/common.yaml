@@ -1,0 +1,8 @@
+puppet_exercise::packages:
+  - nfs-utils
+  - wget
+  - vim
+  - nmap
+  - htop
+  - bash-completion
+  - net-tools

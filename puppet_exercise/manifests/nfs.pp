@@ -6,15 +6,15 @@ class puppet_exercise::nfs {
 		content => '/exercise canary(rw,sync)',
 		ensure => present,
 		replace => true,
-}
-	exec {'/usr/bin/exportfs':
-		onlyif => '/etc/exports|grep $hostname',
-}
+	}
+	exec {'/usr/bin/exportfs -a':
+		onlyif => '/usr/sbin/showmount -e $hostname|/usr/bin/grep /exercise canary',
+	}
 
 	service {'systemctl start nfs':
 		ensure  => running,
 		enable  => true,
-		require => Exec ['/usr/bin/exportfs']
+		require => Exec['/usr/bin/exportfs'],
 
-}
+	}
 }
